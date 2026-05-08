@@ -1,0 +1,16 @@
+Given a claim and a document, rate how useful the document is for fact-checking the claim. A document is useful if it contains information about the entities, events, or topics mentioned in the claim — regardless of whether it supports or contradicts the claim.
+
+Claim: {query}
+
+Document: {document}
+
+Rate usefulness from 0 to 100:
+- 0: completely unrelated topic, no shared entities or concepts
+- 1-20: same broad topic area but does not mention any entity or fact from the claim
+- 21-50: mentions a related entity or topic but provides no specific information relevant to the claim
+- 51-80: discusses the same entity or event as the claim, provides relevant background or context
+- 81-100: directly addresses the specific fact asserted in the claim, whether confirming or refuting it
+
+Important: a document that CONTRADICTS the claim is highly relevant — it is evidence for fact-checking. Score it 51-100 based on how specifically it addresses the claim.
+
+Output only: {{"score": <integer>}}

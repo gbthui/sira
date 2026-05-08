@@ -1,0 +1,5 @@
+defaults:
+  - global
+  - data: scifact
+  - bm25: default
+  - _self_

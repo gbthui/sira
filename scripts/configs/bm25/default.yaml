@@ -1,0 +1,6 @@
+cuda: false
+max_n_candidates: [1, 2]
+tokenizer: unicode_stem
+method: lucene
+k1: 1.5
+b: 0.75

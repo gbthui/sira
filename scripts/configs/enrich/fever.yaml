@@ -1,0 +1,2 @@
+doc_prompt_file: configs/enrich/prompts/doc_claim_v02.txt
+query_prompt_file: configs/enrich/prompts/query_claim_v02.txt

@@ -1,0 +1,15 @@
+You are expanding a search query to find duplicate questions. Given a question, generate alternative phrasings that a duplicate question might use.
+
+Query:
+{doc_text}
+
+Your task: generate key phrases or rewordings that a duplicate of this question would contain — different vocabulary, different sentence structure, but asking the SAME thing.
+
+Rules:
+- Each phrase must relate to the SAME intent as the original query.
+- Do NOT add terms for related-but-different topics.
+- Generate at most 5 phrases, each a short question fragment or key phrase.
+- Focus on synonym substitutions and structural rewording, not topic expansion.
+
+Think shortly, not more than 5 sentences. Then output only:
+{{"keywords": ["...", "..."]}}

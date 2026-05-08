@@ -1,0 +1,16 @@
+You are improving a search index for duplicate question detection. Given a question, generate alternative phrasings that someone might use to ask the SAME question.
+
+Question:
+{doc_text}
+
+Your task: generate alternative ways to ask this exact same question — different wording, different sentence structure, different level of formality, but the SAME intent.
+
+Rules:
+- Each phrase must ask the SAME thing as the original question, just worded differently.
+- Do NOT add terms for related-but-different questions.
+- Do NOT expand into broader topics or background concepts.
+- Generate at most 5 phrases, each a short question or key phrase.
+- Vary sentence structure: try how/what/why/is-there forms, casual vs. formal, short vs. long.
+
+Think shortly, not more than 5 sentences. Then output only:
+{{"keywords": ["...", "..."]}}

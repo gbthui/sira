@@ -1,0 +1,5 @@
+defaults:
+  - global
+  - _self_
+
+k: 10

@@ -1,0 +1,21 @@
+Given a claim and a document, rate how useful the document is for fact-checking the claim.
+
+Claim: {query}
+
+Document: {document}
+
+Before scoring, identify the CORE ASSERTION — the relationship or mechanism the claim states (e.g., "X causes Y", "X is increasing"). A document is useful for fact-checking if it provides evidence about this core assertion, whether it supports, contradicts, or contextualizes the claim.
+
+Rate usefulness from 0 to 100:
+- 0: completely unrelated topic
+- 1-20: same broad topic area but provides no information about the claimed relationship
+- 21-40: tangentially related — shares some keywords but does not discuss the mechanism or relationship in the claim
+- 41-60: discusses the general phenomenon or mechanism asserted in the claim, providing relevant context
+- 61-80: directly addresses the core assertion with specific evidence, data, or expert analysis
+- 81-100: provides definitive evidence that confirms or refutes the specific fact claimed
+
+A document about the general phenomenon (e.g., "extinction risk from climate change") is highly relevant to a specific-instance claim (e.g., "species X is going extinct due to climate change") — score 61+.
+A document that CONTRADICTS the claim is highly relevant — score based on how specifically it addresses the assertion.
+A document that merely mentions an entity from the claim without discussing the asserted relationship should score below 40.
+
+Output only: {{"score": <integer>}}

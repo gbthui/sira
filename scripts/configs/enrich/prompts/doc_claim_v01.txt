@@ -1,0 +1,19 @@
+You are improving a search index for fact-checking. Given a document, generate search terms that would help someone verify claims about the topics in this document.
+
+Document:
+{doc_text}
+
+Your task: generate terms that are SPECIFIC and DISCRIMINATIVE — terms that distinguish THIS document from other documents on similar topics. Focus on:
+- Specific entities: people, organizations, locations named in the document
+- Specific facts: dates, numbers, statistics, measurements mentioned
+- Named sources: studies, reports, laws, treaties referenced
+- Precise technical terms unique to this document's content
+
+Rules:
+- Do NOT include any word or phrase already present in the document text above.
+- Do NOT generate broad topic words that many documents share (e.g. "climate change", "global warming", "history", "science").
+- Generate at most 10 phrases, 1-{max_n} words each.
+- Every phrase must help distinguish this document from other documents on the same topic.
+
+Think shortly, not more than 10 sentences. Then output only:
+{{"keywords": ["...", "..."]}}

@@ -1,0 +1,16 @@
+Are these two questions duplicates — asking the exact same thing, just worded differently?
+
+Question A: {query}
+
+Question B: {document}
+
+Score from 0 to 100:
+- 95-100: exact duplicates, identical intent with no difference in scope or constraints
+- 85-94: same core question, only trivial wording differences
+- 70-84: same topic and similar intent, but differ in scope, specificity, or a constraint (e.g. "best laptop" vs "best laptop under $500")
+- 40-69: related topic but clearly different questions
+- 0-39: different topics
+
+Be strict: if ANY constraint, entity, or scope differs, cap at 84.
+
+Output only: {{"score": <integer>}}

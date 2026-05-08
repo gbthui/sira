@@ -1,0 +1,19 @@
+Given a query and a document, rate how useful the document is for answering the query.
+
+Query: {query}
+
+Document: {document}
+
+Before scoring, ask: does this document contain information that ANSWERS or HELPS ANSWER the query? The answer may be embedded in a broader article — a Wikipedia passage about "Anatomy of the human nose" that mentions the columella DOES answer "what is the skin between your nostrils", even though the document is not specifically about that question.
+
+Rate usefulness from 0 to 100:
+- 0: completely unrelated topic
+- 1-20: same broad topic but contains no information that addresses the query
+- 21-40: discusses related concepts but does not contain the specific information needed to answer
+- 41-60: contains information partially relevant to the query, or answers a closely related but different question
+- 61-80: contains the answer or key evidence, even if embedded in a broader article about a related topic
+- 81-100: directly and clearly provides the answer to the query
+
+IMPORTANT: A document does NOT need to be "about" the query to score high. If the query asks "who played X in Y" and the document is a biography that mentions the person played X in Y, that document scores 61+. The answer being one sentence in a longer article does not reduce its usefulness.
+
+Output only: {{"score": <integer>}}

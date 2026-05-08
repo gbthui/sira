@@ -1,0 +1,2 @@
+doc_prompt_file: configs/enrich/prompts/doc_citation_v01.txt
+query_prompt_file: configs/enrich/prompts/query_citation_v01.txt

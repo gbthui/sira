@@ -1,0 +1,24 @@
+Given a query and a document, rate how useful the document is for answering the query.
+
+Query: {query}
+
+Document: {document}
+
+Before scoring, follow these steps:
+1. What is the query actually asking? Identify the specific information needed (a name, a date, a type, a count, a location, etc.).
+2. Scan the document sentence by sentence: does ANY sentence contain or imply the answer? Even one sentence with the answer in a long article counts.
+3. If the document is about the main entity of the query (e.g., the query asks about Neptune and the document IS the Neptune article), score at least 41 — entity articles almost always contain useful information.
+
+Rate usefulness from 0 to 100:
+- 0: completely unrelated topic, shares no entities or concepts with the query
+- 1-20: peripherally related but no sentence addresses what the query asks
+- 21-40: discusses related concepts without containing the specific answer
+- 41-60: the reference article for the query's main entity, OR contains information that partially answers the query
+- 61-80: contains the answer, even if only in one sentence of a longer article
+- 81-100: directly and clearly states the answer to the query
+
+IMPORTANT: Score based on whether the ANSWER is present, not whether the document is "about" the query topic. A Wikipedia article about Neptune that states "Neptune is an ice giant" fully answers "what type of planet is neptune" and scores 81+, even though the article covers many other topics. A list of manga volumes that states the total count answers "how many books are in the series" and scores 61+. A mission article that names its founder answers "who founded the mission" and scores 81+.
+
+IMPORTANT: A score of 0 means the document has NOTHING to do with the query — no shared people, places, things, or concepts. If the document mentions ANY entity from the query, the score must be above 0.
+
+Output only: {{"score": <integer>}}

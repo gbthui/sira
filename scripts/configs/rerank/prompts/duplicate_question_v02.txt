@@ -1,0 +1,13 @@
+Are these two questions duplicates — asking the exact same thing, just worded differently?
+
+Question A: {query}
+
+Question B: {document}
+
+Score from 0 to 100. To get a high score, the CORE ASK must be identical — same topic, same constraints, same scope. Penalize differences in:
+- Scope (general vs. specific, e.g. "best laptop" vs. "best laptop under $500")
+- Direction (e.g. "how to gain weight" vs. "how to lose weight")
+- Entity (e.g. "in India" vs. "in China")
+- Intent type (e.g. "what is X" vs. "how to do X")
+
+Give a brief reason (one sentence), then output: {{"score": <integer>}}

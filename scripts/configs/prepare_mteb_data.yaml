@@ -1,0 +1,4 @@
+defaults:
+  - global
+  - data: scifact
+  - _self_

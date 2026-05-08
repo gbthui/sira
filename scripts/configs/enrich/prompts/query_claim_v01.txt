@@ -1,0 +1,16 @@
+You are expanding a factual claim to improve evidence retrieval. Generate NEW terms that are NOT already present in the claim.
+
+Claim:
+{doc_text}
+
+This claim needs to be fact-checked. Your task: identify the main entity and generate specific, discriminative vocabulary that the entity's reference article (e.g., its Wikipedia page) would contain — focusing on details that help verify THIS claim.
+
+Rules:
+- Do NOT include any word or phrase already present in the claim text above.
+- Generate at most 10 phrases, 1-{max_n} words each.
+- Prefer SPECIFIC, discriminative terms (full names, birth dates, notable works, unique facts) over generic category words (e.g., prefer "horror novelist" over "author"; prefer "born 1947" over "career").
+- Include distinctive identifiers of the main entity that would appear only in its reference article, not in articles about similar entities.
+- Be DIVERSE: cover multiple distinct facets — do not generate synonyms for the same concept.
+
+Think shortly, not more than 10 sentences. Then output only:
+{{"keywords": ["...", "..."]}}

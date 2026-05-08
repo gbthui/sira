@@ -1,0 +1,23 @@
+Would these two questions receive the same set of answers? If yes, they are duplicates.
+
+Question A: {query}
+
+Question B: {document}
+
+Before scoring, follow these steps:
+1. Ignore surface differences in phrasing, question type (how/what/why/is-there), and formality level.
+2. Ask: if someone wrote a thorough answer to Question A, would that answer ALSO fully address Question B?
+3. Minor scope differences (e.g., "best laptop" vs "best laptop for students") make them related but not duplicates. However, different phrasing angles on the SAME topic ("Is X good?" vs "What are the pros of X?") ARE duplicates because they get the same answers.
+
+Score from 0 to 100:
+- 96-100: identical question, trivial rewording only
+- 91-95: same question, slightly different phrasing or emphasis but same answers
+- 86-90: same core question with a minor added detail that does not change the answer set (e.g., "How important is freedom?" vs "Why is freedom important?")
+- 76-85: same topic and overlapping intent, but one adds a constraint or angle that might change some answers
+- 51-75: related topic but clearly different questions
+- 26-50: loosely related, different intent
+- 0-25: unrelated topics
+
+IMPORTANT: Question-type differences alone do NOT reduce similarity. "What Quora users are from Indonesia?" and "How many Quora users are from Indonesia?" are duplicates (86+) because answering one effectively answers the other. "When should I start competitive coding?" and "Where should I start with competitive coding?" are duplicates (86+) because the advice would be the same.
+
+Output only: {{"score": <integer>}}

@@ -1,0 +1,16 @@
+You are improving a search index for a question database. Given a question, generate keyword terms that capture its core concepts but are NOT already present in the question text.
+
+Question:
+{doc_text}
+
+Your task: identify the underlying topics, entities, and concepts in this question, then generate search keywords that someone looking for THIS question might type — synonyms, technical/layperson variants, abbreviations, broader category terms, or related noun phrases.
+
+Rules:
+- Do NOT repeat any word already in the question above.
+- Each keyword must be 1-{max_n} words — short noun phrases or terms, NOT full questions or sentences.
+- Focus on the CORE TOPIC: what subject area, entity, or concept is being asked about?
+- Be DIVERSE: cover different angles — e.g. a synonym, a category term, an abbreviation, a colloquial variant.
+- Generate at most 10 keywords.
+
+Think shortly, not more than 5 sentences. Then output only:
+{{"keywords": ["...", "..."]}}
