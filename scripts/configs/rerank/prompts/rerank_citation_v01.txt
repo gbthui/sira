@@ -1,3 +1,6 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
 Given a paper (query) and a candidate paper (document), rate how likely there is a citation relationship between them — that is, whether one would cite the other.
 
 Paper: {query}

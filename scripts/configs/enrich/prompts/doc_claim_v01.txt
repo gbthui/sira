@@ -1,3 +1,6 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
 You are improving a search index for fact-checking. Given a document, generate search terms that would help someone verify claims about the topics in this document.
 
 Document:
