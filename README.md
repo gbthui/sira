@@ -1,12 +1,13 @@
 <!-- Copyright (c) Meta Platforms, Inc. and affiliates.
 This source code is licensed under the MIT license found in the
 LICENSE file in the root directory of this source tree. -->
-# SIRA
+# SIRA  
 
 **S**uper**I**ntelligent **R**etrieval **A**gent
 
 SIRA is a multi-stage retrieval pipeline that uses LLMs to enrich both documents and queries, improving BM25 retrieval quality without training. The pipeline consists of five stages: data preparation, BM25 indexing, corpus enrichment (LLM-generated indexing phrases for documents), query expansion (LLM-generated search terms), and LLM-based pointwise reranking. SIRA achieves state-of-the-art results on BEIR benchmarks using only inference-time compute.
 
+Paper: https://arxiv.org/pdf/2605.06647
 ## Requirements
 
 - Python >= 3.12
