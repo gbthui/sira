@@ -76,7 +76,7 @@ configs/
 │   ├── default.yaml                     # top_n, concurrency, max_tokens
 │   └── prompts/relevance_v02.txt
 └── sglang/
-    └── qwen3.6-35b-a3b-fp8:h100.yaml   # model, tp, dp, mem, context_length
+    └── qwen3.6-35b-a3b-fp8_h100.yaml   # model, tp, dp, mem, context_length
 ```
 
 ## Data Layout
